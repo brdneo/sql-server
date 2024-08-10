@@ -78,3 +78,28 @@ ORDER BY
 
 
 -- aula de group by e where
+SELECT
+	ColorName as 'Cor do Produto',
+	COUNT(*) as TotalProdutos
+FROM
+	DimProduct
+WHERE
+BrandName = 'Contoso'	
+GROUP BY
+	colorName
+ORDER BY
+	TotalProdutos desc
+
+
+-- AULA DE HAVING
+SELECT
+	BrandName as Marca,
+	COUNT(BrandName) as TotalMarca
+FROM
+	DimProduct
+GROUP BY
+	BrandName
+HAVING
+	COUNT(BrandName) between 100 and 500
+ORDER BY
+	TotalMarca desc
