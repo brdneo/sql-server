@@ -103,3 +103,5 @@ HAVING
 	COUNT(BrandName) between 100 and 500
 ORDER BY
 	TotalMarca desc
+
+SELECT * from dimproduct
